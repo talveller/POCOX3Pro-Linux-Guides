@@ -12,7 +12,7 @@ Modified TWRP:
 
 - [ADB & Fastboot](https://developer.android.com/studio/releases/platform-tools)
 
-- [Termux]([https://f-droid.org/repo/com.termux_1022.apk])
+- [Termux](https://f-droid.org/repo/com.termux_1022.apk)
 
 - [Latest POCO X3 Pro firmware](https://github.com/WaLoVayu/POCOX3Pro-Common-Files/releases/download/last_firmware/fw_vayu_miui.zip)
 
