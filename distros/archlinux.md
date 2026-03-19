@@ -8,12 +8,12 @@
 - Partitioned device. If you dont know what partitions do you need, follow [partitioning guide](/common/partition.md)
 
 ### Preparing the environment needed to build our system
-Install [Termux](https://github.com/termux/termux-app/releases/latest)
+Install [Termux](https://f-droid.org/repo/com.termux_1022.apk)
 
 ### Installing required packages
 Run this to install required packages throughout the guide
 ```sh
-apt update && apt upgrade -y && apt install wget tsu
+apt update && apt upgrade -y && apt install wget sudo
 ```
 During this command it may ask you some questions, Answer all of them with "y", If it didn't it's not an issue, You can proceed with the guide safely
 
@@ -37,23 +37,22 @@ su -c mount -t ext4 /dev/block/by-name/linux linux
 ### Applying base rootfs 
 > We will now apply base rootfs to the linux partition we mounted.
 
-Run this to enter root shell
+Run this to extract the rootfs
 ```sh
+su -c tar xvf ArchLinuxARM-aarch64-latest.tar.gz -C linux```sh
 tsu
-```
-Then this to apply the rootfs
-```sh
-tar xvf ArchLinuxARM-aarch64-latest.tar.gz -C linux
-```
-Then you can exit the root shell
-```sh
-exit
 ```
 
 ### Entering Chroot
 Now we will download the script that will lets us enter chroot
 ```sh
-wget https://github.com/WaLoVayu/POCOX3Pro-Linux-Guides/raw/main/files/ch -O $PREFIX/bin/ch && chmod +x $PREFIX/bin/ch
+wget httpThen this to apply the rootfs
+```sh
+tar xvf ArchLinuxARM-aarch64-latest.tar.gz -C linux
+```
+Then you can exit the root shell
+```
+https://github.com/talveller/POCOX3Pro-Linux-Guides/blob/main/files/ch -O $PREFIX/bin/ch && chmod +x $PREFIX/bin/ch
 ```
 
 And now run this anywhere in termux
@@ -88,6 +87,7 @@ Now we will tell the system our machine name
 ```sh
 echo "xiaomi-vayu" > /etc/hostname
 ```
+replace xiaomi-vayu with the name of the phone
 
 Now you can install packages and update the system
 
@@ -101,6 +101,8 @@ pacman -Sy archlinux-keyring archlinuxarm-keyring --noconfirm
 ```
 >[!WARNING]
 >If you are planning to use grub, Remove u-boot-tools- from the command bellow!!! It breaks grub installation!!!
+
+no need for grub
 
 Install general packages
 ```sh
@@ -131,7 +133,7 @@ echo "$USER ALL=(ALL:ALL) NOPASSWD: ALL" >> /etc/sudoers
 
 Now enter as the user you created using this command
 ```sh
-su theuseryoucreated
+su $USER
 cd
 ```
 Now we will install a desktop environment
@@ -146,7 +148,7 @@ sudo pacman -S phosh --noconfirm
 You can also replace Phosh with:
 - gnome ```Gnome```
 - plasma-desktop ```KDE Plasma, UNTESTED``` 
-- xfce4 ```UNTESTED```
+- xfce4 ```UNTESTED``` DOSN'T WORK!!
   
 And many more
 
@@ -189,7 +191,7 @@ Grab:
 
 - sm8150.conf
 
-From [this link](https://github.com/WaLoVayu/POCOX3Pro-Linux-Guides/tree/main/files/vayu)
+From [this link](https://github.com/talveller/POCOX3Pro-Linux-Guides/tree/main/files/vayu)
 
 Once again we will assume they are in /storage/emulated/0/Download
 
