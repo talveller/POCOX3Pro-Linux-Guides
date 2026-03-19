@@ -13,7 +13,7 @@
 ## Get started
 - [Project status](/Status-en.md)
 
-- [Installation instructions](guides/partition.md) 
+- [Installation instructions](guides/select partitiong.md) 
 
 - [Troubleshooting](guides/troubleshooting.md)
 
