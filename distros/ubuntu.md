@@ -13,7 +13,7 @@ Install [Termux](https://f-droid.org/repo/com.termux_1022.apk)
 ### Installing required packages
 Run this to install required packages throughout the guide
 ```sh
-apt update && apt upgrade -y && apt install wget tsu
+apt update && apt upgrade -y && apt install wget sudo
 ```
 During this command it may ask you some questions, Answer all of them with "y", If it didn't it's not an issue, You can proceed with the guide safely
 
@@ -22,7 +22,7 @@ During this command it may ask you some questions, Answer all of them with "y", 
 
 Run this to download it
 ```sh
-wget https://cdimage.ubuntu.com/ubuntu-base/releases/24.04/release/ubuntu-base-24.04.1-base-arm64.tar.gz
+wget https://cdimage.ubuntu.com/ubuntu-base/releases/25.10/release/ubuntu-base-25.10-base-arm64.tar.gz
 ```
 
 ### Mounting Linux partition 
@@ -37,23 +37,15 @@ su -c mount -t ext4 /dev/block/by-name/linux linux
 ### Applying base rootfs 
 > We will now apply base rootfs to the linux partition we mounted.
 
-Run this to enter root shell
+run this to extract the rootfs to the partition
 ```sh
-tsu
-```
-Then this to apply the rootfs
-```sh
-tar xvf ubuntu-base-24.04.1-base-arm64.tar.gz -C linux
-```
-Then you can exit the root shell
-```sh
-exit
+su -c tar -xvf ubuntu-base-25.10-base-arm64.tar.gz linux
 ```
 
 ### Entering Chroot
 Now we will download the script that will lets us enter chroot
 ```sh
-wget https://github.com/WaLoVayu/POCOX3Pro-Linux-Guides/raw/main/files/ch -O $PREFIX/bin/ch && chmod +x $PREFIX/bin/ch
+wget https://github.com/talveller/POCOX3Pro-Linux-Guides/blob/main/files/ch -O $PREFIX/bin/ch && chmod +x $PREFIX/bin/ch
 ```
 
 And now run this anywhere in termux
@@ -86,15 +78,18 @@ Now we will tell the system our machine name
 ```sh
 echo "xiaomi-vayu" > /etc/hostname
 ```
+replace xiaomi-vayu with the name for the phone
 
 Now you can install packages and update the system
 
 During this command it may ask you some questions, Answer all of them with "y"
 ```sh
-apt update && apt upgrade -y && unminimize 
+apt install unminimize && apt update && apt upgrade -y && unminimize 
 ```
 >[!WARNING]
 >If you are planning to use grub, Remove u-boot-tools- from the command bellow!!! It breaks grub installation!!!
+
+by my testing you dont need to use grub
 
 Install general packages
 ```sh
@@ -140,7 +135,7 @@ Now press CTRL + S to save and CTRL + X to exit
 
 Now enter as the user you created using this command
 ```sh
-su theuseryoucreated
+su $USER
 cd
 ```
 Now we will install a desktop environment
@@ -156,7 +151,7 @@ You can also replace ubuntu-desktop-minimal with:
 - ubuntu-desktop ```Full of bloatware, Heats the system on idle```
 - plasma-mobile sddm sddm-theme-breeze ```KDE Plasma Mobile```
 - kubuntu-desktop ```KDE Plasma, UNTESTED``` 
-- xfce4 ```UNTESTED```
+- xfce4 ```UNTESTED``` DOESN'T WORK!!
   
 And many more
 
@@ -169,6 +164,7 @@ echo "PARTLABEL=linux / ext4 errors=remount-ro,x-systemd.growfs 0 1
 PARTLABEL=esp /boot vfat umask=0077 0 1
 PARTLABEL=logfs /simpleinit vfat umask=0077 0 1" | sudo tee /etc/fstab
 ```
+note: press shift enter if you are using scrcpy in the phone i dont know
 
 ### Getting the panel model
 POCO X3 Pro has 2 panels, One is called Huaxing and one is called Tianma; You need to know which one you have, Picking the definitions of the other panel may be catastrophic and may cause permanent damage!!!!! 
@@ -199,7 +195,7 @@ Grab:
 
 - sm8150.conf
 
-From [this link](https://github.com/WaLoVayu/POCOX3Pro-Linux-Guides/tree/main/files/vayu)
+From [this link](https://github.com/talveller/POCOX3Pro-Linux-Guides/tree/main/files/vayu)
 
 Once again we will assume they are in /storage/emulated/0/Download
 
@@ -226,7 +222,7 @@ sudo tar xvf /sdcard/Download/modules.tar.gz
 
 Run this command 
 ```sh
-sudo pacman -S git --noconfirm
+sudo apt install git -y
 git clone https://github.com/sm8150-mainlining/firmware-xiaomi-vayu.git
 sudo cp -r firmware-xiaomi-vayu/lib/firmware/* /lib/firmware
 sudo mkdir -p /usr/share/qcom
