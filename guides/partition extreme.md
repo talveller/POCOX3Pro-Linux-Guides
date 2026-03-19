@@ -14,7 +14,7 @@ Modified TWRP:
 
 - [Termux](https://play.google.com/store/apps/details?id=com.termux)
 
-- [Latest POCO X3 Pro firmware](https://github.com/WaLoVayu/POCOX3Pro-Common-Files/releases/download/last_firmware/fw_vayu_miui.zip)
+- [Latest POCO X3 Pro firmware](https://github.com/talveller/POCOX3Pro-Linux-Guides/releases/download/guide_files/fw_vayu_miui.zip)
 
 ### Notes
 >
