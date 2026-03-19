@@ -21,7 +21,7 @@
 ## Miscellaneous
 - [Dualboot setup](guides/dualboot.md) 
 
-- [Reinstall instructions](guides/reinstall-selection.md) 
+- [Reinstall instructions](https://github.com/talveller/POCOX3Pro-Linux-Guides/blob/main/guides/distro-selection.md)
 
 - [Uninstall instructions](guides/uninstall.md)
 
