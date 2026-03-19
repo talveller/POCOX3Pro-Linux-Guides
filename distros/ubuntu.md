@@ -39,7 +39,7 @@ su -c mount -t ext4 /dev/block/by-name/linux linux
 
 run this to extract the rootfs to the partition
 ```sh
-su -c tar -xvf ubuntu-base-25.10-base-arm64.tar.gz linux
+su -c tar -xvf ubuntu-base-25.10-base-arm64.tar.gz -C linux
 ```
 
 ### Entering Chroot
