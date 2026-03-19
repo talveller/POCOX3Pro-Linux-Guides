@@ -98,23 +98,23 @@ rm $
 ```
 
 ### Recreating userdata
-> Replace **150GB** with the actual value you want to allocate to Android. In this example you will have 150GB-11.7GB = **138GB** of usable space
+> Replace **15GB** with the actual value you want to allocate to Android. In this example you will have **15GB** of usable space
 ```cmd
-mkpart userdata ext4 11.7GB 150GB
+mkpart userdata ext4 11.7GB 26.7GB
 ```
 
 ### Creating ESP partition
-> Replace **150GB** with the actual end value you used for **userdata**
+> Replace **26.7GB** with the actual end value you used for **userdata**
 >
-> Replace **151GB** with the same value + **1GB**
+> Replace **26.7GB** with the same value + **1GB**
 ```cmd
-mkpart esp fat32 150GB 151GB
+mkpart esp fat32 26.7GB 27.7GB
 ```
 
 ### Creating linux partition
-> Replace **151GB** with the actual end value you used for **esp**
+> Replace **27.7GB** with the actual end value you used for **esp**
 ```cmd
-mkpart linux ext4 151GB -0MB
+mkpart linux ext4 27.7GB -0MB
 ```
 
 ### Making ESP bootable
