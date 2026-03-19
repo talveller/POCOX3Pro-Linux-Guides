@@ -106,7 +106,7 @@ mkpart userdata ext4 11.7GB 26.7GB
 ### Creating ESP partition
 > Replace **26.7GB** with the actual end value you used for **userdata**
 >
-> Replace **26.7GB** with the same value + **1GB**
+> Replace **27.7GB** with the same value + **1GB**
 ```cmd
 mkpart esp fat32 26.7GB 27.7GB
 ```
@@ -135,7 +135,6 @@ quit
 ### Check if Android still starts
 
 - Just restart the phone, and see if Android still works
-- 
 > After it finishes booting, set up your device and root it if you haven't already
 
 ### Installing Termux
