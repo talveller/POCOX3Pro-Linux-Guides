@@ -22,13 +22,13 @@ If you are already in chroot and you do see a "root@localhost" or a "youruser@lo
 
 Install the config
 ```sh
-sudo wget https://raw.githubusercontent.com/WaLoVayu/POCOX3Pro-Linux-Guides/refs/heads/main/files/simpleinit.uefi.cfg -O /boot/simpleinit/simpleinit.uefi.cfg
+sudo wget https://raw.githubusercontent.com/talveller/POCOX3Pro-Linux-Guides/refs/heads/main/files/simpleinit.uefi.cfg -O /boot/simpleinit/simpleinit.uefi.cfg
 ```
 
 ### Flash edk2-msm UEFI
 > After doing this step you will have a boot menu everytime you boot which you can select Android or Linux from
 
-Grab uefi_installer from [here](https://github.com/WaLoVayy/edk2-msm/releases/tag/huh):
+Grab uefi_installer from [here](https://github.com/talveller/POCOX3Pro-Linux-Guides/releases/tag/huh):
 
 - If you're panel is Hauxing download uefi-installer-vayu-huaxing.zip
 
@@ -37,3 +37,5 @@ Grab uefi_installer from [here](https://github.com/WaLoVayy/edk2-msm/releases/ta
 After that boot your custom recovery and flash the file you downloaded and reboot
 
 Voila! A boot menu appeared with Android and Linux as an option, Enjoy!
+
+note: if android is not booting there is a boot.img backup in /sdcard/ or /external_sd/ if you have a external sd
