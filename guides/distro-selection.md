@@ -4,7 +4,7 @@ Select the distro you would like to install.
 
 | **[Ubuntu](/distros/ubuntu.md)** | **[Arch Linux](/distros/archlinux.md)**
 |------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------
-| <a href="/distros/ubuntu.md"><img src="https://github.com/user-attachments/assets/ee3d088b-6bd5-4990-b6f1-70a87b9d3099" width="80"></a> | <a href="/distros/archlinux.md"><img src="https://github.com/user-attachments/assets/a52f9ccf-de03-4e17-b8c1-ed19cea2b5c5" width="80"></a>
+| <a href="/distros/ubuntu.md"><img src="https://github.com/user-attachments/assets/a52f9ccf-de03-4e17-b8c1-ed19cea2b5c5" width="80"></a> | <a href="/distros/archlinux.md"><img src="https://github.com/user-attachments/assets/044cfa11-84f7-444c-8dc0-804e97a6e8fc" width="80"></a>
 
 
 
