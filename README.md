@@ -13,7 +13,7 @@
 ## Get started
 - [Project status](/Status-en.md)
 
-- [Installation instructions](guides/select partitiong.md) 
+- [Installation instructions](https://github.com/talveller/POCOX3Pro-Linux-Guides/blob/main/guides/select%20partitioning.md)
 
 - [Troubleshooting](guides/troubleshooting.md)
 
