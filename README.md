@@ -15,7 +15,7 @@
 
 - [Installation instructions](https://github.com/talveller/POCOX3Pro-Linux-Guides/blob/main/guides/select%20partitioning.md)
 
-- [Troubleshooting](guides/troubleshooting.md)
+- [Troubleshooting](guides/troubleshooting.md) page not here
 
 
 ## Miscellaneous
