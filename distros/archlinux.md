@@ -39,19 +39,12 @@ su -c mount -t ext4 /dev/block/by-name/linux linux
 
 Run this to extract the rootfs
 ```sh
-su -c tar xvf ArchLinuxARM-aarch64-latest.tar.gz -C linux```sh
-tsu
+su -c tar xvf ArchLinuxARM-aarch64-latest.tar.gz -C linux
 ```
 
 ### Entering Chroot
 Now we will download the script that will lets us enter chroot
 ```sh
-wget httpThen this to apply the rootfs
-```sh
-tar xvf ArchLinuxARM-aarch64-latest.tar.gz -C linux
-```
-Then you can exit the root shell
-```
 https://github.com/talveller/POCOX3Pro-Linux-Guides/blob/main/files/ch -O $PREFIX/bin/ch && chmod +x $PREFIX/bin/ch
 ```
 
