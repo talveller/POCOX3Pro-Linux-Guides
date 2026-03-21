@@ -94,16 +94,16 @@ adb reboot bootloader
 ```
 
 - 
-> then open mi flash tool (XiaoMiFlash.exe) as administrator
+then open mi flash tool (XiaoMiFlash.exe) as administrator
 
 <img width="1107" height="710" alt="image" src="https://github.com/user-attachments/assets/298a43c9-4746-4813-b796-e5b38ad7f98d" />
 
-> in <img width="1093" height="71" alt="image" src="https://github.com/user-attachments/assets/fd588165-5af5-40d6-ac57-6f95e1c7cc22" /> click select then chose the path to the rom
+in <img width="1093" height="71" alt="image" src="https://github.com/user-attachments/assets/fd588165-5af5-40d6-ac57-6f95e1c7cc22" /> click select then chose the path to the rom
 
-> click refresh
+click refresh
 
-> then click clean all
+then click clean all
 
-> and one last thing click flash and wait (about 5min)
+and one last thing click flash and wait (about 5min)
 
-> and finished
+and finished
