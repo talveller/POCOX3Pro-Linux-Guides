@@ -5,7 +5,7 @@
 
 - Rooted Android
 
-- Partitioned device. If you dont know what partitions do you need, follow [partitioning guide](/common/partition.md)
+- Partitioned device. If you dont know what partitions do you need, follow [partitioning guide](/guides/partition.md)
 
 ### Preparing the environment needed to build our system
 Install [Termux](https://f-droid.org/repo/com.termux_1022.apk)
