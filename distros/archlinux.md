@@ -58,7 +58,7 @@ And you are now inside the system! But we are not finished yet, There's still al
 ### Basic setup
 > We will now run some commands to fix errors and warnings such as:
 
-- apt cannot resolve host
+- pacman cannot resolve host
 ```sh
 rm /etc/resolv.conf
 touch /etc/resolv.conf
