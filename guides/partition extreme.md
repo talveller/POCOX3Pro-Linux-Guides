@@ -98,7 +98,7 @@ rm $
 ```
 
 ### Recreating userdata
-> Replace **15GB** with the actual value you want to allocate to Android. In this example you will have **15GB** of usable space
+> Replace **26.7GB** with the actual value you want to allocate to Android. In this example you will have **15GB** of usable space
 ```cmd
 mkpart userdata ext4 11.7GB 26.7GB
 ```
