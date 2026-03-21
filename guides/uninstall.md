@@ -107,3 +107,5 @@ then click clean all
 and one last thing click flash and wait (about 5min)
 
 and finished
+
+> the photo doesn't have a device i bricked mine
