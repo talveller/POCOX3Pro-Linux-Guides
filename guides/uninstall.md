@@ -8,13 +8,12 @@ Modified TWRP:
 |-------------------------------------------------|-----------------|
 | [twrp-3.7.1_vap.img](https://github.com/talveller/POCOX3Pro-Linux-Guides/releases/download/guide_files/twrp-3.7.1_vap.img) | Android 12/12.1/13/14/15 |
 
-- Unlocked bootloader
 
 - [ADB & Fastboot](https://developer.android.com/studio/releases/platform-tools)
 
-- [Termux](https://f-droid.org/repo/com.termux_1022.apk)
+- [Mi Flash Tool](https://xiaomiflashtool.com/wp-content/uploads/MiFlash20191206.zip)
 
-- [Latest POCO X3 Pro firmware](https://github.com/talveller/POCOX3Pro-Linux-Guides/releases/download/guide_files/fw_vayu_miui.zip)
+- [Latest POCO X3 Pro rom](https://xmfirmwareupdater.com/miui/vayu/stable/V14.0.3.0.TJUMIXM/)
 ### Notes
 >
 > [!WARNING]  
@@ -51,29 +50,6 @@ cd path\to\platform-tools
 fastboot flash recovery path\to\moddedtwrp.img reboot recovery
 ```
 
-### Backing up your boot image
->
-> This will back up your boot image in the current directory
-
-```cmd
-adb pull /dev/block/by-name/boot boot.img
-```
-
-### Flashing latest firmware
->
-> [!Important]
-> It is mandatory to flash the latest firmware (this does not affect your current ROM).
-
-- Download the **fw_vayu_miui.zip** and put it somewhere on your phone.
-- Select the **Install** button in TWRP, locate the firmware file, then install it.
-- There is no need to reboot yet, stay in TWRP for the next few steps.
-
-### Unmount data
-> Ignore any errors such as "Invalid argument" and continue
-```cmd
-adb shell umount /dev/block/by-name/userdata
-```
-
 ### Resize partition table
 ``` cmd
 adb shell sgdisk --resize-table 64 /dev/block/sda
@@ -91,35 +67,16 @@ print
 ```
 
 ### Removing userdata
-> Replace **$** with the actual number of **userdata** (it should be **32**)
+> Replace **$** with the actual number of **esp and linux** (it should be **33 and 34**)
 ```cmd
+rm $
 rm $
 ```
 
 ### Recreating userdata
 > Replace **150GB** with the actual value you want to allocate to Android. In this example you will have 150GB-11.7GB = **138GB** of usable space
 ```cmd
-mkpart userdata ext4 11.7GB 150GB
-```
-
-### Creating ESP partition
-> Replace **150GB** with the actual end value you used for **userdata**
->
-> Replace **151GB** with the same value + **1GB**
-```cmd
-mkpart esp fat32 150GB 151GB
-```
-
-### Creating linux partition
-> Replace **151GB** with the actual end value you used for **esp**
-```cmd
-mkpart linux ext4 151GB -0MB
-```
-
-### Making ESP bootable
-> Replace **$** with the actual partition number of **esp**, which should be **33**
-```cmd
-set $ esp on
+mkpart userdata ext4 11.7GB -0MB
 ```
 
 ### Exit parted
@@ -131,14 +88,22 @@ quit
 > Format all data in TWRP, or Android will not boot.
 - ( Go to **Wipe** > **Format data** > type **yes** )
 
-### Check if Android still starts
+- restart the phone to bootloader
+```cmd
+adb reboot bootloader
+```
 
-- Just restart the phone, and see if Android still works
 - 
-> After it finishes booting, set up your device and root it if you haven't already
+> then open mi flash tool (XiaoMiFlash.exe) as administrator
 
-### Installing Termux
-- Download and install **Termux** and grant it root access.
+<img width="1107" height="710" alt="image" src="https://github.com/user-attachments/assets/298a43c9-4746-4813-b796-e5b38ad7f98d" />
 
+> in <img width="1093" height="71" alt="image" src="https://github.com/user-attachments/assets/fd588165-5af5-40d6-ac57-6f95e1c7cc22" /> click select then chose the path to the rom
 
-## [Next step: Installing a Linux distro](distro-selection.md)
+> click refresh
+
+> then click clean all
+
+> and one last thing click flash and wait (about 5min)
+
+> and finished
