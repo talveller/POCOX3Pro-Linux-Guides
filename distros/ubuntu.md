@@ -45,7 +45,7 @@ su -c tar -xvf ubuntu-base-25.10-base-arm64.tar.gz -C linux
 ### Entering Chroot
 Now we will download the script that will lets us enter chroot
 ```sh
-wget https://github.com/talveller/POCOX3Pro-Linux-Guides/blob/main/files/ch -O $PREFIX/bin/ch && chmod +x $PREFIX/bin/ch
+wget https://raw.githubusercontent.com/talveller/POCOX3Pro-Linux-Guides/main/files/ch -O $PREFIX/bin/ch && chmod +x $PREFIX/bin/ch
 ```
 
 And now run this anywhere in termux
