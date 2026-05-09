@@ -28,7 +28,7 @@ wget https://cdimage.ubuntu.com/ubuntu-base/releases/25.10/release/ubuntu-base-2
 ### Mounting Linux partition 
 > We will now mount linux ext4 partition we created earlier so that we can build our system there.
 ```sh
-sudo mkfs.ext4 /dev/block/by-name/linux
+sudo mkfs -t ext4 /dev/block/by-name/linux
 sudo mkfs.fat /dev/block/by-name/esp -F32 -s1 -n esp
 mkdir linux
 su -c mount -t ext4 /dev/block/by-name/linux linux
