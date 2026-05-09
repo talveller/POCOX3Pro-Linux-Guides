@@ -22,7 +22,7 @@ During this command it may ask you some questions, Answer all of them with "y", 
 
 Run this to download it
 ```sh
-wget https://cdimage.ubuntu.com/ubuntu-base/releases/25.10/release/ubuntu-base-25.10-base-arm64.tar.gz
+wget https://cdimage.ubuntu.com/ubuntu-base/releases/24.04/release/ubuntu-base-24.04.3-base-arm64.tar.gz
 ```
 
 ### Mounting Linux partition 
