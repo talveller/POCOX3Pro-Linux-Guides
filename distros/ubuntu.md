@@ -13,7 +13,7 @@ Install [Termux](https://f-droid.org/repo/com.termux_1022.apk)
 ### Installing required packages
 Run this to install required packages throughout the guide
 ```sh
-apt update && apt upgrade -y && apt install wget sudo
+apt update && apt upgrade -y && apt install wget sudo dosfstools
 ```
 During this command it may ask you some questions, Answer all of them with "y", If it didn't it's not an issue, You can proceed with the guide safely
 
