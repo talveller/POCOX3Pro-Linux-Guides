@@ -82,7 +82,10 @@ adb shell sgdisk --resize-table 64 /dev/block/sda
 
 ### Preparing for partitioning
 ```cmd
-adb shell parted /dev/block/sda
+adb shell
+```
+```cmd
+parted /dev/block/sda
 ```
 
 ### Print the current partition table
