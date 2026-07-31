@@ -25,6 +25,3 @@
 
 - [Uninstall instructions](guides/uninstall.md)
 
-## Where to find us
-
-You can find us at [our Telegram group if you need any assistance! Not promoting there telegram after that
