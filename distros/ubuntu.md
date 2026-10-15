@@ -9,7 +9,7 @@
 
 ### Preparing the environment needed to build our system
 Install [Termux](https://f-droid.org/repo/com.termux_1022.apk)
-and download this [unminimize](/files/unminimize.deb)
+
 ### Installing required packages
 Run this to install required packages throughout the guide
 ```sh
@@ -84,7 +84,11 @@ Now you can install packages and update the system
 
 During this command it may ask you some questions, Answer all of them with "y"
 ```sh
-apt install unminimize && apt update && apt upgrade -y && unminimize 
+wget https://raw.githubusercontent.com/talveller/POCOX3Pro-Linux-Guides/main/files/unminimize.deb && apt install ./unminimize.deb
+```
+
+```sh
+apt update && apt upgrade -y && unminimize 
 ```
 >[!WARNING]
 >If you are planning to use grub, Remove u-boot-tools- from the command bellow!!! It breaks grub installation!!!
