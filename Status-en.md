@@ -12,7 +12,7 @@
 | ♋ Cellular Data       |                                                 | ❌            |
 | ♋ SMS                 |                                                 | ❌            |
 | ♋ Wifi                |                                                 | ✅            |
-| 📦 UFS                 | Doesn't work on 128GB models and some 256GB ones| ⚠️            |
+| 📦 UFS                 |                                                 | ✅            |
 | 🔵 Bluetooth           |                                                 | ✅            |
 | 🎆 GPU                 |                                                 | ✅            |
 | 🔋 Battery             |                                                 | ✅            |
