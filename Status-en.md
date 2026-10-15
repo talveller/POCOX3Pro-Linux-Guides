@@ -37,7 +37,7 @@
 |------------------------|---------------------------------------------|----------------|
 | 🔉 Audio Speaker       |                                             | ✅            |
 | 🔉 Handset  Speaker    |                                             | ✅            |
-| 🔉 AUX                 | sometimes work (its one in a million in working) | ⚠️            |
+| 🔉 AUX                 | sometimes work (its one in a million)       | ⚠️            |
 | 🎙️ Internal Top Mic    |                                             | ❌            |
 | 🎙️ Internal Bottom Mic |                                             | ❌            |
 
