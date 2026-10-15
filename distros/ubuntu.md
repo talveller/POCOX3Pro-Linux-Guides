@@ -9,7 +9,7 @@
 
 ### Preparing the environment needed to build our system
 Install [Termux](https://f-droid.org/repo/com.termux_1022.apk)
-
+and download this [unminimize](/files/unminimize.deb)
 ### Installing required packages
 Run this to install required packages throughout the guide
 ```sh
