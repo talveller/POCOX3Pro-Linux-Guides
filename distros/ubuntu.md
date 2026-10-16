@@ -226,7 +226,7 @@ sudo tar xvf /sdcard/Download/modules.tar.gz
 
 Run this command 
 ```sh
-sudo apt install git -y
+cd
 git clone https://github.com/sm8150-mainlining/firmware-xiaomi-vayu.git
 sudo cp -r firmware-xiaomi-vayu/lib/firmware/* /lib/firmware
 sudo mkdir -p /usr/share/qcom
